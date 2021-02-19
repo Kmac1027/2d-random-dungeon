@@ -22,7 +22,13 @@ public class Player : MonoBehaviour
     
     void Update()
     {
-        float horz = System.Math.Sign(Input.GetAxis("Horizontal"));
+        Move();
+    }
+
+    
+    void Move()
+    {
+                float horz = System.Math.Sign(Input.GetAxis("Horizontal"));
         float vert = System.Math.Sign(Input.GetAxis("Vertical"));
         if(Mathf.Abs(horz) > 0 || (Mathf.Abs(vert) > 0))
         {
@@ -51,6 +57,7 @@ public class Player : MonoBehaviour
             }
         }
     }
+
     IEnumerator SmoothMove()
     {
         isMoving = true;
