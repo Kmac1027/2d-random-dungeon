@@ -190,95 +190,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8833a631465f74ca09b43917645ad8ff, type: 3}
---- !u!1 &159663931
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 159663934}
-  - component: {fileID: 159663933}
-  - component: {fileID: 159663932}
-  m_Layer: 0
-  m_Name: Main Camera
-  m_TagString: MainCamera
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!81 &159663932
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 159663931}
-  m_Enabled: 1
---- !u!20 &159663933
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 159663931}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 1
-  orthographic size: 5
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!4 &159663934
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 159663931}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 252976021}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &252976021 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5755623451132490625, guid: 8833a631465f74ca09b43917645ad8ff,
-    type: 3}
-  m_PrefabInstance: {fileID: 60636354}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &647937680
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,6 +233,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa1c804e609af442980f5a6f2db30dba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  randomItems:
+  - {fileID: 5146216870037739006, guid: f0cbb94e29417444d9c13b86062e3523, type: 3}
+  - {fileID: 612024038026895114, guid: d2d6845e305bb43c085d3f94a2e719f8, type: 3}
+  - {fileID: 2127946905541663106, guid: 0939c502ffc0241f68add186ca2a94a6, type: 3}
+  - {fileID: 3782817569476425600, guid: 78d28f10a5cd745a8816e487a3c0bcda, type: 3}
+  - {fileID: 7272116879535816190, guid: 8489a1e3f82b6433dada62ecfe68f2c9, type: 3}
+  randomEnemies:
+  - {fileID: 5133055665357323105, guid: 5fd120b32f25a494c83f994cb96eb95c, type: 3}
+  - {fileID: 5704357973134332514, guid: 8968963e4d9654104ab224be2c2f6777, type: 3}
+  - {fileID: 3184192766449011692, guid: 5b5f2c4becb1b44d3a718d905a12cc0d, type: 3}
+  - {fileID: 7005405146350590588, guid: e124be0e827234766a8f3dfa6d2b24ab, type: 3}
+  - {fileID: 5246030969060003852, guid: f1a2d56d73c784ebb809cdb0405bf51f, type: 3}
   floorPrefab: {fileID: 4852702527880433699, guid: 520cb51cdb1584d54865d51088c77381,
     type: 3}
   wallPrefab: {fileID: 2565906599591329434, guid: 6782d4503da554448a13e45cd3a52853,
@@ -330,7 +253,11 @@ MonoBehaviour:
     type: 3}
   exitPrefab: {fileID: 3398419466343066639, guid: 386c67b2ac9994e7f981e38d8a57bc6d,
     type: 3}
-  totalFloorCount: 500
+  totalFloorCount: 50
+  itemSpawnPercent: 10
+  enemySpawnPercent: 0
+  dungeonType: 1
+  windingHallPercent: 0
   minX: 0
   maxX: 0
   minY: 0
